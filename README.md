@@ -1,0 +1,1 @@
+A server for [lazybones](https://github.com/pledbrook/lazybones).
