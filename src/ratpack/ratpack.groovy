@@ -9,13 +9,13 @@ import uk.co.cacoethes.lazybones.BintrayClient
 
     get('/list') { Request request, Response response ->
         def json = client.list()
-        response.text(json)
+        response.text("application/json", json)
         response.end()
     }
 
     get('/search') { Request request, Response response ->
         def json = client.search(request.queryParams)
-        response.text(json)
+        response.text("application/json", json)
         response.end()
     }
 }

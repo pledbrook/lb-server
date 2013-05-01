@@ -16,6 +16,9 @@ class BintrayClient {
 
         client = new RESTClient('https://api.bintray.com')
         client.authorization = new HTTPBasicAuthorization(bintrayUser, bintrayKey)
+        client.defaultAcceptHeader = "application/json"
+        client.defaultContentTypeHeader = "application/json"
+        client.defaultCharset = "UTF-8"
     }
 
     public String list() {
